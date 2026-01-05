@@ -1,0 +1,264 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color: #0f172a;
+}
+
+.crud-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+}
+
+.crud-card {
+  width: 1050px;
+  max-width: 98%;
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.35s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.crud-head {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.crud-title {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.crud-subtitle {
+  margin: 0;
+  color: #64748b;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.crud-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  padding: 8px 10px;
+  border-radius: 14px;
+  font-size: 12.5px;
+  color: #475569;
+}
+
+.form {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1.6fr 1fr;
+  gap: 12px;
+}
+
+.field label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 14px;
+  border: 1.8px solid #d1d5db;
+  outline: none;
+  background: #fff;
+  transition: 0.2s;
+  font-weight: 700;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.16);
+}
+
+.btn-row {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 900;
+  background: #0f172a;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.btn:hover { transform: translateY(-2px); }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+.btn.primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 10px 18px rgba(37, 99, 235, 0.28);
+}
+
+.btn.danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  box-shadow: 0 10px 18px rgba(239, 68, 68, 0.22);
+}
+
+.msg {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.toolbar {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search {
+  width: 420px;
+  max-width: 100%;
+  padding: 11px 12px;
+  border-radius: 14px;
+  border: 1.8px solid #d1d5db;
+  outline: none;
+  background: #fff;
+  transition: 0.2s;
+  font-weight: 700;
+}
+
+.search:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.16);
+}
+
+.hint {
+  color: #64748b;
+  font-size: 12.5px;
+}
+
+.table-wrap {
+  margin-top: 14px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background: #0f172a;
+  color: white;
+}
+
+.table th, .table td {
+  padding: 12px 12px;
+  text-align: left;
+  font-size: 13.5px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.bold { font-weight: 900; }
+
+.actions-col {
+  display: flex;
+  gap: 8px;
+}
+
+.mini {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 900;
+  background: #2563eb;
+  color: white;
+  transition: 0.2s;
+}
+
+.mini:hover { transform: translateY(-2px); }
+
+.mini.danger {
+  background: #ef4444;
+}
+
+.role {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.role-admin { border-color: rgba(239,68,68,0.35); }
+.role-seller { border-color: rgba(34,197,94,0.35); }
+.role-manager { border-color: rgba(168,85,247,0.35); }
+.role-user { border-color: rgba(37,99,235,0.35); }
+
+.empty {
+  margin-top: 14px;
+  padding: 18px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  text-align: center;
+}
+
+.empty.small { margin: 12px; }
+
+.empty-title {
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.empty-sub {
+  color: #64748b;
+  font-size: 13px;
+}
